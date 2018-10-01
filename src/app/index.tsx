@@ -1,3 +1,4 @@
 import * as React from 'react'
+import App from 'app/containers/App'
 
-export default () => <div>Hello World!</div>
+export default () => <App />
