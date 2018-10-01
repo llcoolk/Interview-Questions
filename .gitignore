@@ -2,7 +2,7 @@
 node_modules
 
 # Production bundle
-build
+dist
 
 # Optional npm cache directory
 .npm
@@ -16,3 +16,4 @@ coverage
 .DS_Store
 .vscode
 .snap
+resources
