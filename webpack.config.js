@@ -52,7 +52,7 @@ module.exports = {
           {
             loader: 'css-loader',
             query: {
-              modules: true,
+              modules: false,
               sourceMap: !isProduction,
               importLoaders: 1,
               localIdentName: isProduction
