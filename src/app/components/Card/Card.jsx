@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default ({ children, type }) => (
+export default ({ children, flipped, type }) => (
   <div className="card">
-    <span className={type}>{children}</span>
+    <span className={flipped ? 'answer' : 'question'}>{children}</span>
   </div>
 )
