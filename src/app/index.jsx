@@ -22,7 +22,7 @@ class App extends Component {
   render() {
     const { flipped, next, prev, question, type } = this.props
     return (
-      <main className="root">
+      <>
         <div className="container">
           <Header />
           <Nav />
@@ -31,7 +31,7 @@ class App extends Component {
         </div>
         <BackButton prev={prev} />
         <ForwardButton next={next} />
-      </main>
+      </>
     )
   }
 }
