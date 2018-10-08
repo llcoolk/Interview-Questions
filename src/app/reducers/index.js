@@ -10,7 +10,7 @@ const initialState = {
     id: 0,
     question: '',
     answer: '',
-    set: 'python',
+    set: 'python'
   }
 }
 

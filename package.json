@@ -1,16 +1,17 @@
 {
-  "name": "react-redux-boilerplate",
+  "name": "interview-questions",
   "version": "1.0.0",
-  "description": "react, redux, react-router, hot-reload, sass",
-  "main": "index.js",
+  "description": " A curated collection of interview questions — flash card style! ⚡",
+  "main": "main.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lefrenk/Boilerplate/tree/master/React-Redux"
+    "url": "https://github.com/frankfaustino/Interview-Questions"
   },
   "scripts": {
     "start": "NODE_ENV=development webpack-dev-server",
     "build": "NODE_ENV=production webpack -p",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "pretty": "prettier --write \"**/*.js\""
   },
   "jest": {
     "moduleFileExtensions": [
@@ -35,9 +36,8 @@
   "keywords": [
     "react",
     "redux",
-    "react-router",
-    "hot-reload",
-    "sass"
+    "interview questions",
+    "flash cards"
   ],
   "author": "Frank Faustino",
   "license": "MIT",
@@ -65,6 +65,7 @@
     "install": "^0.12.1",
     "jest": "^23.6.0",
     "node-sass": "^4.9.3",
+    "prettier": "^1.14.3",
     "react-hot-loader": "^4.3.11",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.0",

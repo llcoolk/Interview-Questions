@@ -27,4 +27,3 @@ describe('Routes', () => {
     expect(wrapper.find(About)).toHaveLength(1)
   })
 })
-

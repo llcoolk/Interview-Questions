@@ -21,12 +21,9 @@ module.exports = {
     hot: true,
     headers: {
       'Access-Control-Allow-Origin': '*'
-    },
+    }
   },
-  entry: [
-    'react-hot-loader/patch',
-    path.join(__dirname, '/src/main.jsx')
-  ],
+  entry: ['react-hot-loader/patch', path.join(__dirname, '/src/main.jsx')],
   module: {
     rules: [
       {
@@ -60,6 +57,10 @@ module.exports = {
   },
   mode: dev ? 'development' : 'production',
   plugins: dev
-    ? [HTMLWebpackPluginConfig, new webpack.HotModuleReplacementPlugin(), new webpack.NamedModulesPlugin()]
+    ? [
+        HTMLWebpackPluginConfig,
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.NamedModulesPlugin()
+      ]
     : [HTMLWebpackPluginConfig, DefinePluginConfig]
 }

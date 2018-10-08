@@ -6,8 +6,7 @@ describe('Counter reducer', () => {
   })
 
   it('should handle FOO', () => {
-    expect(reducer({}, { type: 'FOO', payload: 'bar' }))
-      .toEqual({ message: 'bar' })
+    expect(reducer({}, { type: 'FOO', payload: 'bar' })).toEqual({ message: 'bar' })
   })
 
   it('should handle BAZ', () => {

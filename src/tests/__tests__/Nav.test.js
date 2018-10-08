@@ -10,17 +10,18 @@ describe('Links', () => {
     wrap = mount(
       <MemoryRouter initialEntries={['/']} initialIndex={0}>
         <Nav />
-      </MemoryRouter>)
+      </MemoryRouter>
+    )
   })
 
   describe('Links', () => {
     it('Home', () => {
-      const home = wrap.find('Link').findWhere(n => n.prop('to') === '/')
+      const home = wrap.find('Link').findWhere((n) => n.prop('to') === '/')
       expect(home).toHaveLength(1)
     })
 
     it('About', () => {
-      const about = wrap.find('Link').findWhere(n => n.prop('to') === '/about')
+      const about = wrap.find('Link').findWhere((n) => n.prop('to') === '/about')
       expect(about).toHaveLength(1)
     })
   })
