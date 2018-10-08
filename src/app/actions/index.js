@@ -1,7 +1,8 @@
 export const getCurrent = () => (dispatch, getState) => {
   const { cards, current: { flipped, id } } = getState()
-  const { answer, question, type } = cards[id]
-  dispatch({ type: 'CURRENT', answer, flipped, id, question, cardType: type })
+  const { answer, question } = cards[id]
+  const content = flipped ? answer : question
+  dispatch({ type: 'CURRENT', content })
 }
 
 export const next = () => (dispatch, getState) => {
@@ -23,4 +24,7 @@ export const prev = () => (dispatch, getState) => {
   }
 }
 
-export const flip = () => ({ type: 'FLIP' })
+export const flip = () => (dispatch) => {
+  dispatch({ type: 'FLIP' })
+  dispatch(getCurrent())
+}

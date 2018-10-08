@@ -3,15 +3,16 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import PropTypes from 'prop-types'
 import * as actions from './actions'
-import { Card, Header, Nav, FlipButton, BackButton, ForwardButton } from './components'
+import { Card, Header, Nav, Back, Button, Forward, Flip } from './components'
 
 class App extends Component {
   static propTypes = {
+    content: PropTypes.string.isRequired,
+    flip: PropTypes.func.isRequired,
     flipped: PropTypes.bool.isRequired,
     getCurrent: PropTypes.func.isRequired,
     next: PropTypes.func.isRequired,
     prev: PropTypes.func.isRequired,
-    question: PropTypes.string.isRequired,
     type: PropTypes.string.isRequired
   }
 
@@ -20,17 +21,17 @@ class App extends Component {
   }
 
   render() {
-    const { flipped, next, prev, question, type } = this.props
+    const { flip, flipped, next, prev, content, type } = this.props
     return (
       <>
         <div className="container">
           <Header />
           <Nav />
-          <Card flipped={flipped} type={type}>{question}</Card>
-          <FlipButton />
+          <Card flipped={flipped} type={type}>{content}</Card>
+          <Button action={flip} className="flip-button"><Flip /></Button>
         </div>
-        <BackButton prev={prev} />
-        <ForwardButton next={next} />
+        <Button action={prev} className="back-button"><Back /></Button>
+        <Button action={next} className="forward-button"><Forward /></Button>
       </>
     )
   }
@@ -38,9 +39,9 @@ class App extends Component {
 
 const mapDispatchToProps = dispatch => bindActionCreators(actions, dispatch)
 
-const mapStateToProps = ({ current: { flipped, question, type } }) => ({
+const mapStateToProps = ({ current: { content, flipped, type } }) => ({
+  content,
   flipped,
-  question,
   type
 })
 
