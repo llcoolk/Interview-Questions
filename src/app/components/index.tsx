@@ -1,6 +1,0 @@
-export { ButtonBack } from './Buttons/ButtonBack'
-export { ButtonFlip } from './Buttons/ButtonFlip'
-export { ButtonForward } from './Buttons/ButtonForward'
-export { Card } from './Card'
-export { Header } from './Header'
-export { Nav } from './Nav'

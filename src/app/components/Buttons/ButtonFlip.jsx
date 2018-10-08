@@ -1,6 +1,6 @@
-import * as React from 'react'
+import React from 'react'
 
-export const ButtonFlip = () => (
+export default () => (
   <div className="button flip-button">
     <svg viewBox="-5 -7 36 36" width={48}>
       <path fill="none" d="M.01 0h24v24h-24V0z" />
