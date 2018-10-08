@@ -10,6 +10,8 @@
     "semi": 0,
     "comma-dangle": 0,
     "import/no-extraneous-dependencies": 0,
+    "object-curly-newline": 0,
+    "react/destructuring-assignment": 0,
     "jsx-a11y/anchor-is-valid": [
       "error",
       {
